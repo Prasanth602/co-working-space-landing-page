@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Mynew landing-page</title>
+    </head>
+    <body>
+        <!------------the Header area----------->
+        <header>
+            <div class="header-bg">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="#">work <span>flow</span></a>
+                </div>
+                <nav class="nav-area">
+                    <i class="fas fa-times"></i>
+                    <ul class="nav-links">
+                        <li><a href="#">Start</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Workspace</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <div class="button-1">
+                  <a href=""><button>Book Now</button></a>
+                </div> 
+            </div>
+            <div class="banner">
+                <div class="banner-text">
+                    <h1><span>CO-Working </span>Is <br/>The Building <br/>Block of <span>success</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum modi cupiditate minima vel.</p>
+                    <div class="search-bar">
+                        <input type="text" />
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="banner-img">
+                    <img src="bg-banner.jpg" alt="image">
+                </div>
+            </div>
+         </div>   
+        </header>
+                    <!-- ---------  brands  area -------------->
+        <section class="company-list">
+            <h3>16000 people joined in Co-Working</h3>
+            <div class="brands">
+               
+                <div class="row-2 brands-row">
+                    <img src="images/brands/logo2.png" alt="">
+                </div>
+                <div class="row-3 brands-row">
+                    <img src="images/brands/logo3.png" alt="">
+                </div>
+                <div class="row-4 brands-row">
+                    <img src="images/brands/logo4.png" alt="">
+                </div>
+                <div class="row-4 brands-row">
+                    <img src="images/brands/logo5.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- services area-->
+        <section class="services"> 
+            <div class="col-1 services-row">
+                <i class="fas fa-users"></i>
+                <h3>Co-Working</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae sint.</p>
+            </div>
+            <div class="col-2 services-row">
+                <i class="fas fa-door-open"></i>
+                <h3>Private Room</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae sint. </p>
+            </div>
+            <div class="col-3 services-row">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Conference Hall</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae sint.</p>
+            </div>
+            <div class="col-4 services-row">
+                <i class="fas fa-laptop-house"></i>
+                <h3>Virtual Office</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae sint.</p>
+            </div>
+        </section>
+        <!-- this is Features area-->
+        <section class="container">
+            <div class="features">
+                <div class="feature-1 feature-items">
+                    <h2 class="experience">10+</h2>
+                    <h3>Years Of Experience</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="feature-2 feature-items">
+                    <h2 class="feedback">99%</h2>
+                    <h3>Positive Feedback</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="feature-3 feature-items">
+                    <h2 class="experience">24/7</h2>
+                    <h3>Customer Support</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="logo">
+                <a href="#">work <span>flow</span></a>
+            </div>
+
+        </footer>
+        <script>
+        
+            document.querySelector(".menu-btn").addEventListener("click",function(){
+            document.querySelector(".nav-area").style.left="0"
+        });
+        document.querySelector(".fa-times").addEventListener("click",function(){
+            document.querySelector(".nav-area").style.left="-100%";
+        });
+        // sticky nav bar
+        window.onscroll = function() {
+            myFunction()
+        };
+        var navbar = document.querySelectorAll(".nav-bar").style.backgroundCcolor="";
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+             } else {
+             navbar.classList.remove("sticky");
+                    }
+        }
+        </script>
+    </body>
+</html>

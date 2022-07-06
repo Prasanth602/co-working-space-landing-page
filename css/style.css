@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins sans-serif;
+}
+/*=========css for header area =======*/
+header .header-bg{
+    background:linear-gradient(90deg,#ffff 70%, #4b05ec 30%);
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.logo{
+    font-size: 36px;
+    font-weight: bold;
+}
+.logo a{
+    text-decoration: none;
+    color: #000;
+}
+.logo span{
+    color: #4b05ec;
+    font-style: italic;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+nav ul li{
+     display: inline-block;
+     padding-left: 24px;
+     font-size: 21px;
+}
+.nav-links li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #4b05ec;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links li:hover::after{
+    width: 100%;
+}
+.button-1 button{
+    padding:12px 20px;
+    font-size: 14px;
+}
+ .nav-bar .menu-btn{
+    color: #4b05ec;
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+}
+.nav-bar .fa-times{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 1048px){
+    .nav-bar{
+        background-color: #ffff;
+        box-shadow: 0px 12px 18px rgba(77, 87, 222, 0.3);;
+    }
+    .nav-bar .logo{
+        font-size: 26px;
+   
+    }
+    .nav-links li a{
+        font-size: 16px;
+        color: black;
+    }
+    
+}
+@media (max-width:700px){
+      .button-1{
+          display: none;
+      }
+      .nav-bar .menu-btn{
+          display: block;
+      }
+      .nav-area{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#4b05ec;
+        top:0;
+        left:-100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 10;
+      }
+      .nav-links li{
+          display: flex;
+          flex-direction: column;
+          padding-top: 32px;
+          margin-right: 24px;
+      }
+      .nav-links li a{
+        color: #fff;
+        font-size: 21px;
+        padding: 12px;
+      }
+      .nav-links li a:hover{
+          background-color: white;
+          color: #4b05ec;
+      }
+      .nav-bar .fa-times{
+        display: block;
+      }
+}
+/* =====scroll nav bar ====== */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+/* ======= CSS FOR BANNER AREA ==== */
+.banner{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 5%;
+    
+}
+.banner .banner-text h1{
+    font-size: 50px;
+    text-align: left;
+}
+.banner-text p{
+    padding: 5%;
+}
+h1 span{
+    color: #4b05ec;
+}
+.search-bar input,i{
+    border: none;
+    font-size: 18px;
+}
+.search-bar input{
+    width: 100%;
+    border-radius: 12px;
+}
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.search-bar{
+    background: #ffff;
+    box-shadow: 0px 12px 18px rgba(77, 87, 222, 0.3);
+    margin-right: 20%;
+    display: flex;
+    border-radius: 24px;
+}
+.search-bar i{
+    align-items: flex-start;
+    background-color: #4b05ec;
+    color: #ffff;
+    padding: 16px;
+    margin-right: 0;
+    border-radius: 2px;
+}
+.banner-img img{
+    width: 600px;
+}
+@media (max-width:991px){
+    .banner{
+        position: relative;
+    }
+    .banner::after{
+        content: '';
+        background: url(../bg-banner.jpg) no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .banner-text h1{
+        font-size: 10px;
+        padding-left: 12px;
+        width: 60%;
+    }
+    .banner-img{
+        display: none;
+    } 
+    .banner-text{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .search-bar{
+        width: 60%;
+        margin:0 20% 5% 0 ;
+        font-size: 16px;
+        box-shadow: 0px 12px 18px rgba(77, 87, 222, 0.3);
+    }
+    .search-bar input{
+        width: 100%;
+    }
+    .banner-text p{
+        width: 60%;
+    }
+}
+/*===== css for brands area ===== */
+@media (max-width:600px){
+    .brands{
+        flex-direction: column;}  
+}
+.company-list{
+    background-color: rgb(210, 230, 247);
+    text-align: center;
+}
+.company-list h3{
+    padding: 3%;
+}
+ .brands{
+     width: 60%;
+     margin: 0  auto 15% auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+}
+.brands-row{
+position: relative;
+padding: 24px;
+box-sizing: border-box;
+
+}
+/*======== css for services ====== */
+.services{
+    margin:10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+.services-row{
+    position: relative;
+    padding: 24px;
+    align-items: flex-start;
+    width: 200px;
+}
+.services-row i{
+    font-size: 40px;
+    color: burlywood;
+    
+}
+.services-row h3{
+    font-size: 21px;
+    padding:12px;
+    
+}
+.services-row p{
+padding: 10px;
+text-align: left;
+font-size: 14px;
+}
+.services-row:hover{
+    box-shadow: 0  12px 18px  rgba(77, 87, 222, 0.3);
+}
+/* =============== css for container area========= */
+.container{
+    width: 100%;
+    height: 70vh;
+    background: url('../images/download.jpeg') 50px 0 no-repeat,url('../images/image-asset.jpeg') 400px 0 no-repeat;
+    background-size: 300px 400px;
+    margin-bottom: 0;
+}
+.features{
+    position: relative;
+    display: flex;
+    width: 40%;
+    top: 20%;
+    left: 10%;
+    margin: auto;
+    padding:18px;
+    box-shadow: 0  12px 18px  rgba(77, 87, 222, 0.3);
+    background-color: #ffff;
+    z-index: 1;
+}
+.feature-items{
+    margin: 15px;
+}
+.feature-items h2{
+    font-size: 36px;
+    color: #4b05ec;
+}
+.feature-items h3{
+    font-size: 16px;
+    font-weight:bolder;
+    
+}
+.feature-items p{
+    font-size: 12px;
+
+}
+@media (max-width:900px){
+    .container{
+        background: url(../images/image-asset.jpeg) no-repeat;
+        background-size: cover;
+
+    }
+    .features{
+        flex-wrap: wrap;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+}
+/* ======== css for footer area ========= */
+footer{
+    text-align: center;
+    background-color: lightgray;
+    padding: 100px;
+}
+
+
