@@ -167,6 +167,7 @@ h1 span{
     margin-right: 20%;
     display: flex;
     border-radius: 24px;
+    outline: none;
 }
 .search-bar i{
     align-items: flex-start;
